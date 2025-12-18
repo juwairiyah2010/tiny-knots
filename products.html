@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover — Tiny Knots</title>
+  <link rel="stylesheet" href="products.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="prod-header">
+    <div class="logo"><a href="index.html">TINY<span> KNOTS✨</span></a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html" class="back">← Back</a>
+  </header>
+
+  <section class="prod-hero">
+    <div class="prod-hero-inner">
+      <h1>Find Your Crochet Crush ✨</h1>
+      <p>Shop curated favorites — cute, cozy, and made with love.</p>
+      <div class="search-filter">
+        <input type="search" placeholder="Search products, e.g. 'strawberry'">
+        <select aria-label="Sort">
+          <option>Featured</option>
+          <option>Price: Low → High</option>
+          <option>Price: High → Low</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <main class="catalog">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <button class="chip">All</button>
+      <button class="chip">Keychains</button>
+      <button class="chip">Phone Cases</button>
+      <button class="chip">Home</button>
+      <button class="chip">Gifts</button>
+    </aside>
+
+    <section class="product-grid" id="product-grid">
+      <!-- Products will be loaded here by scripts/main.js -->
+    </section>
+  </main>
+
+  <footer class="prod-footer">
+    <p>© 2025 Tiny Knots — Handmade with cozy vibes ✨</p>
+  </footer>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

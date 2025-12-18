@@ -1,0 +1,53 @@
+:root{
+  --bg1:#fff6fb;
+  --accent:#ff9ac2;
+  --muted:#f6eaf3;
+  --card:#ffffff;
+  --text:#333;
+  --shadow: rgba(17,17,17,0.06);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Quicksand,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg1),#fff);
+  color:var(--text);
+}
+.prod-header{
+  display:flex;align-items:center;justify-content:space-between;padding:18px 36px;background:transparent;
+}
+.prod-header .logo a{font-family:Pacifico, Quicksand;font-size:22px;color:var(--text);text-decoration:none}
+.prod-header nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+.prod-header nav a{color:var(--text);text-decoration:none;font-weight:600}
+.prod-header .back{background:var(--muted);padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--text)}
+
+.prod-hero{padding:36px;background:linear-gradient(90deg,#fff,#fff7fb)}
+.prod-hero-inner{max-width:1100px;margin:0 auto;text-align:center}
+.prod-hero h1{font-size:36px;margin:0 0 8px}
+.prod-hero p{margin:0 0 18px;opacity:0.85}
+.search-filter{display:flex;gap:12px;justify-content:center}
+.search-filter input{padding:12px 14px;border-radius:12px;border:1px solid #f0dff0;min-width:260px}
+.search-filter select{padding:12px 14px;border-radius:12px;border:1px solid #f0dff0}
+
+/* Layout */
+.catalog{display:grid;grid-template-columns:220px 1fr;gap:28px;max-width:1200px;margin:28px auto;padding:0 18px}
+.filters{background:linear-gradient(180deg,var(--muted),#fff);padding:18px;border-radius:12px;height:max-content}
+.filters h3{margin-top:0}
+.chip{display:block;background:#fff;border-radius:999px;padding:8px 12px;border:1px solid #ffe6f0;margin:8px 0;cursor:pointer}
+
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+.product-card{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 8px 20px var(--shadow);text-align:center;transition:transform .22s ease,box-shadow .22s ease}
+.product-card img{width:100%;height:170px;object-fit:cover;border-radius:10px}
+.product-card h3{font-size:16px;margin:10px 0 6px;text-transform:capitalize}
+.product-card .price{color:var(--accent);font-weight:700;margin-bottom:10px}
+.product-card .actions{display:flex;gap:8px;justify-content:center}
+.product-card .primary{background:var(--accent);border:none;color:white;padding:8px 12px;border-radius:10px;cursor:pointer}
+.product-card .ghost{background:transparent;border:1px solid #eee;padding:8px 12px;border-radius:10px;cursor:pointer}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+
+.prod-footer{text-align:center;padding:24px 12px;color:#777}
+
+@media(max-width:900px){
+  .catalog{grid-template-columns:1fr;}
+  .filters{order:2}
+  .product-grid{order:1}
+}

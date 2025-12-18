@@ -1,0 +1,324 @@
+/* Fonts: Quicksand (cute clean) + Pacifico (handwritten) */
+/* Tagline below Products heading */
+.products .tagline {
+  font-style: italic;
+  color: #ff5f96;
+  margin-bottom: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(180deg, #fff7f9, #ffeef7);
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6%;
+  background: #fff;
+  border-bottom: 2px solid #ffe0ec;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.7rem;
+  color: #ff7ba9;
+}
+
+.logo span {
+  color: #ff9bbd;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff7ba9;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ff9bbd, #ff7ba9);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(255,123,169,0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff7ba9, #ff5f96);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6%;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #444;
+}
+
+.hero-content h1 span {
+  color: #ff7ba9;
+}
+
+.hero-content p {
+  margin: 15px 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+.sticker.heart { top: -20px; left: -20px; }
+.sticker.flower { bottom: -15px; right: -25px; }
+.sticker.star { top: 10px; right: -30px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Products */
+.products {
+  padding: 3rem 6%;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255,123,169,0.15);
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.price {
+  color: #ff7ba9;
+  font-weight: 700;
+}
+
+.product-card button {
+  background: linear-gradient(135deg, #ff9bbd, #ff7ba9);
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: linear-gradient(135deg, #ff7ba9, #ff5f96);
+}
+
+/* Mood section styles */
+.moods {
+  padding: 3rem 6%;
+  text-align: center;
+  background: linear-gradient(180deg, #ffeef7, #fff7f9);
+}
+
+.moods h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.mood-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mood-btn {
+  background: linear-gradient(135deg, #ff9bbd, #ff7ba9);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255,123,169,0.3);
+  transition: transform 0.3s;
+}
+
+.mood-btn:hover {
+  transform: scale(1.05);
+}
+
+/* About */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6%;
+  flex-wrap: wrap;
+  background: #fff7fb;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  max-width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.about-image .sticker {
+  font-size: 1.8rem;
+}
+
+.sparkle { top: -20px; left: -15px; }
+.strawberry { bottom: -10px; right: -15px; }
+
+/* Contact */
+.contact {
+  padding: 3rem 6%;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ffcce2;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.contact button {
+  background: linear-gradient(135deg, #ff9bbd, #ff7ba9);
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: linear-gradient(135deg, #ff7ba9, #ff5f96);
+}
+
+/* Footer */
+footer {
+  background: #fff0f6;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
