@@ -129,7 +129,13 @@ async function createOrder(cartId, name, email) {
   return { orderId: res.lastID, cartId, name, email, total };
 }
 
-module.exports = { init, getProducts, getProduct, createCart, getCart, createOrder };
+async function createProduct(title, price, image, category, description) {
+  const res = await run('INSERT INTO products (title, price, image, category, description) VALUES (?,?,?,?,?)', [title, price, image, category, description]);
+  const id = res.lastID;
+  return getProduct(id);
+}
+
+module.exports = { init, getProducts, getProduct, createCart, getCart, createOrder, createProduct };
 
 // Initialize DB on require
 init().catch(err => console.error('DB init error', err));

@@ -28,3 +28,18 @@ The server serves the static files and exposes APIs under `/api`:
 - `POST /api/order` — mock order creation
 
 Open http://localhost:3000 in your browser.
+
+Adding product images (Pinterest or other URLs)
+---------------------------------------------
+
+- If you want to add products that use image URLs (Pinterest or elsewhere), edit `scripts/add_products_from_urls.js` and populate the `productsToAdd` array with objects: `{ title, price, image, category, description }`.
+
+- WARNING: Only add images you have the right to use. Pinterest images are often copyrighted — do not use them publicly without permission. Prefer images from Unsplash/Pexels or your own uploads.
+
+- Run the script to insert products into the SQLite DB:
+
+```bash
+node scripts/add_products_from_urls.js
+```
+
+The script uses the `createProduct` helper and will seed the DB entries. After adding products, open `/products.html` or the React client to see them.
